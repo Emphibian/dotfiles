@@ -1,3 +1,3 @@
 # dotfiles
 
-## my config for i3 and polybar and the like
+my config for i3 and polybar and the like
