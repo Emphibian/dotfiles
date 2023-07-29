@@ -1,3 +1,3 @@
 # dotfiles
 
-Config files for i3 and polybar that currently use
+Config files that I currently use

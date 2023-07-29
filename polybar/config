@@ -18,10 +18,12 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222222
+;old-background = #222222
+background = #181B1E
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+;old-foreground = #dfdfdf
+foreground = #DCD88C
 foreground-alt = #555
 primary = #9d72bf
 secondary = #e60053
@@ -50,12 +52,20 @@ padding-right = 1
 module-margin = 2
 ;module-margin-right = 2
 
+;------------------
+;------Fonts-------
+;------------------
+
 font-0 = fixed:pixelsize=8;2
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;2
 font-2 = siji:pixelsize=8;1
-font-3 = NotoSansMono Nerd Font:size=10;0
-font-4 = NotoSansMono Nerd Font:size=11;2
+font-3 = NotoSansM Nerd Font Mono:style=ExtraBold:size=15;3
+font-4 = TerminessTTF Nerd Font Mono:size=20:style=Bold;4
 font-5 = Roboto:size=9:weight=bold;2
+
+;------------------
+;------------------
+
 
 modules-left = bspwm i3
 modules-center = spotify
@@ -104,13 +114,13 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-ws-icon-0 = 1:web;
-ws-icon-1 = 2:dev;
-ws-icon-2 = 3:term;
-ws-icon-3 = 4:fil;
-ws-icon-4 = 5:gen;
-ws-icon-5 = 6:mus;
-ws-icon-6 = 7:thw;
+ws-icon-0 = 1:web;󰈹
+ws-icon-1 = 2:dev;󰅴
+ws-icon-2 = 3:term;
+ws-icon-3 = 4:fil;󰂺
+ws-icon-4 = 5:gen;
+ws-icon-5 = 6:mus;󰋋
+ws-icon-6 = 7:thw;
 ws-icon-7 = 8:thq;
 ws-icon-default = ♟
 
@@ -120,7 +130,7 @@ ws-icon-default = ♟
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 3
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
@@ -129,12 +139,12 @@ label-focused = %icon%
 label-focused-font = 5
 label-focused-background = ${colors.background-alt}
 ;label-focused-underline= ${colors.primary}
-label-focused-padding = 3
+label-focused-padding = 5
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
 label-unfocused-font = 5
-label-unfocused-padding = 1
+label-unfocused-padding = 3
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -156,10 +166,11 @@ interval = 1
 format-prefix = " " 
 format-prefix-font = 5
 format = <label>
-format-foreground = #21d861
+;format-foreground = #21d861
+format-foreground = #f6867c
 label-font = 6
 exec = python /home/ryuzure/.config/polybar/spotify_status.py -f '  {artist} - {song}  '
-format-underline = #21d861 
+format-underline = #f6867c 
 ;control players (optional)
 click-left = playerctl --player=spotify play-pause 
 click-right = playerctl --player=spotify next 
